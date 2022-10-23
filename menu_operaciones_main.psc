@@ -119,7 +119,6 @@ Funcion suma()
 	FinMientras	
 	resultado_suma = calculo_operacion_suma(sumando1, sumando2);
 	imprimir_operacion_suma(resultado_suma, sumando1, sumando2);
-	//acerca_de_suma();	
 FinFuncion
 
 // Lectura SUMA
@@ -139,7 +138,8 @@ Funcion validador_suma = validar_datos_suma(sumando1 Por Valor, sumando2 Por Val
         Esperar 500 Milisegundos;
     SiNo
         validador_suma = Falso;
-		Escribir "valor de algunos de los sumandos invalido";
+		Escribir "Argumento invalido";
+		acerca_de_suma();
     FinSi
 FinFuncion
 
@@ -161,14 +161,15 @@ FinFuncion
 
 // Acerca de SUMA
 Funcion acerca_de_suma()
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
-    Esperar 500 Milisegundos;
-    Escribir "Algoritmo para la suma de dos numeros.";
+    Esperar 300 Milisegundos;
+    Escribir "Algoritmo para la suma de dos numeros:";
 	Escribir "Toma minuendo y sustraendo como argumentos, y regresa lectura, validacion, calculo e impresion";
-    Esperar 500 Milisegundos;
+	Escribir "Ambos sumandos soportan 64 bits, es decir, numeros entre -9223372036854775808 y +9223372036854775807";
+    Esperar 300 Milisegundos;
 FinFuncion
 
 
@@ -190,9 +191,7 @@ Funcion resta()
 		validador_resta = validar_datos_resta(minuendo, sustraendo);
 	FinMientras	
 	resultado_resta = calculo_operacion_resta(minuendo, sustraendo);
-	imprimir_operacion_resta(resultado_resta, minuendo, sustraendo);
-	//acerca_de_resta();
-	
+	imprimir_operacion_resta(resultado_resta, minuendo, sustraendo);	
 FinFuncion
 
 // Lectura RESTA
@@ -212,7 +211,8 @@ Funcion validador_resta = validar_datos_resta(minuendo Por Valor, sustraendo Por
         Esperar 500 Milisegundos;
     SiNo
         validador_resta = Falso;
-		Escribir "valor del minuendo o sustraendo invalido";
+		Escribir "Argumento invalido";
+		acerca_de_resta();
     FinSi
 FinFuncion
 
@@ -234,14 +234,15 @@ FinFuncion
 
 // Acerca de RESTA
 Funcion acerca_de_resta()
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Algoritmo para la resta de dos numeros.";
 	Escribir "Toma minuendo y sustraendo como argumentos, y regresa lectura, validacion, calculo e impresion";
-    Esperar 500 Milisegundos;
+	Escribir "Ambos argumentos, minuendo y sustraendo, soportan 64 bits, es decir, numeros entre -9223372036854775808 y +9223372036854775807";
+    Esperar 300 Milisegundos;
 FinFuncion
 
 
@@ -263,8 +264,7 @@ Funcion multiplicacion()
 		validador_multiplicacion = validar_datos_multiplicacion(factor1, factor2);
 	FinMientras	
 	resultado_multiplicacion = calculo_operacion_multiplicacion(factor1, factor2);
-	imprimir_operacion_multiplicacion(resultado_multiplicacion, factor1, factor2);
-	//acerca_de_multiplicacion();	
+	imprimir_operacion_multiplicacion(resultado_multiplicacion, factor1, factor2);	
 FinFuncion
 
 // Lectura MULTIPLICACION
@@ -281,10 +281,11 @@ Funcion validador_multiplicacion = validar_datos_multiplicacion(factor1 Por Valo
     Definir validador_multiplicacion Como Logico;
     Si (factor1 >= -9223372036854775808 & factor1 <= 9223372036854775807 ) & (factor2 >= -9223372036854775808 & factor2 <= 9223372036854775807 ) Entonces // 64 bits
         validador_multiplicacion = Verdadero;       
-        Esperar 500 Milisegundos;
+        Esperar 300 Milisegundos;
     SiNo
         validador_multiplicacion = Falso;
-		Escribir "Valor de algunos de los factores invalido";
+		Escribir "Argumento invalido";
+		acerca_de_multiplicacion();
     FinSi
 FinFuncion
 
@@ -306,14 +307,15 @@ FinFuncion
 
 // Acerca de MULTIPLICACION
 Funcion acerca_de_multiplicacion()
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Algoritmo para la multiplicacion de dos numeros.";
 	Escribir "Toma dos factores como argumentos, y regresa lectura, validacion, calculo e impresion";
-    Esperar 500 Milisegundos;
+	Escribir "Ambos factores soportan 64 bits, es decir, numeros entre -9223372036854775808 y +9223372036854775807";
+    Esperar 300 Milisegundos;
 FinFuncion
 
 
@@ -336,9 +338,7 @@ Funcion division()
 	FinMientras
 	
 	resultado_division = calculo_operacion_division(dividendo, divisor);
-	imprimir_operacion_division(resultado_division, dividendo, divisor);
-	//acerca_de_division();
-	
+	imprimir_operacion_division(resultado_division, dividendo, divisor);	
 FinFuncion
 
 // Lectura DIVISION
@@ -354,12 +354,13 @@ FinFuncion
 // Validacion DIVISION
 Funcion validador_division = validar_datos_division(dividendo Por Valor, divisor Por Valor)
     Definir validador_division Como Logico;
-    Si (dividendo <> 0) Entonces
-        validador_division = Verdadero;
-        Escribir "valor del divisor invalido";
-        Esperar 500 Milisegundos;
+    Si (divisor <> 0 & divisor >= -9223372036854775808 & divisor <= +9223372036854775807) & (dividendo >= -9223372036854775808 & dividendo <= +9223372036854775807) Entonces // 64 bit, divisor <> 0
+        validador_division = Verdadero;        
+        Esperar 300 Milisegundos;
     SiNo
         validador_division = Falso;
+		Escribir "Argumento invalido";
+		acerca_de_division();
     FinSi
 FinFuncion
 
@@ -380,14 +381,15 @@ FinFuncion
 
 // Acerca de DIVISION
 Funcion acerca_de_division()
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Algoritmo para calcular la division entre dos numeros.";
 	Escribir "Toma dividendo y divisor como argumentos, y regresa lectura, validacion, calculo e impresion";
-    Esperar 500 Milisegundos;
+	Escribir "Ambos argumentos, dividendo y divisor soportan 64 bits, es decir, numeros entre -9223372036854775808 y +9223372036854775807 (excepto divisor = 0)";
+    Esperar 300 Milisegundos;
 FinFuncion
 
 
@@ -409,7 +411,6 @@ Funcion cambio_signo()
 	FinMientras	
 	resultado_cambio_signo = calculo_operacion_cambio_signo(factor);
 	imprimir_operacion_cambio_signo(resultado_cambio_signo, factor);
-	//acerca_de_cambio_signo();
 FinFuncion
 
 // Lectura CAMBIO DE SIGNO
@@ -424,10 +425,11 @@ Funcion validador_cambio_signo = validar_datos_cambio_signo(factor Por Valor)
     Definir validador_cambio_signo Como Logico;
     Si (factor >= -9223372036854775808 & factor <= 9223372036854775807) Entonces // 64 bits
         validador_cambio_signo = Verdadero;       
-        Esperar 500 Milisegundos;
+        Esperar 300 Milisegundos;
     SiNo
         validador_cambio_signo = Falso;
-		Escribir "Factor invalido";
+		Escribir "Argumento invalido";
+		acerca_de_cambio_signo();
     FinSi
 FinFuncion
 
@@ -447,14 +449,14 @@ FinFuncion
 
 // Acerca de CAMBIO DE SIGNO
 Funcion acerca_de_cambio_signo()
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Algoritmo para cambiar el signo de un numero.";
 	Escribir "Toma un solo factor como argumento, y regresa lectura, validacion, calculo e impresion";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
 FinFuncion
 
 
@@ -476,7 +478,6 @@ Funcion valor_absoluto()
 	FinMientras	
 	resultado_valor_absoluto = calculo_operacion_valor_absoluto(termino);
 	imprimir_operacion_valor_absoluto(resultado_valor_absoluto, termino);
-	//acerca_de_valor_absoluto();
 FinFuncion
 
 // Lectura VALOR ABSOLUTO
@@ -491,10 +492,11 @@ Funcion validador_valor_absoluto = validar_datos_valor_absoluto(termino Por Valo
     Definir validador_valor_absoluto Como Logico;
     Si (factor >= -9223372036854775808 & factor <= 9223372036854775807) Entonces // 64 bits
         validador_valor_absoluto = Verdadero;       
-        Esperar 500 Milisegundos;
+        Esperar 300 Milisegundos;
     SiNo
         validador_valor_absoluto = Falso;
-		Escribir "Termino invalido";
+		Escribir "Argumento invalido";
+		acerca_de_valor_absoluto();
     FinSi
 FinFuncion
 
@@ -508,7 +510,7 @@ Funcion resultado_valor_absoluto = calculo_operacion_valor_absoluto(termino Por 
 		Si termino >= 0 Entonces
 			resultado_valor_absoluto = termino;
 		SiNo
-			mensaje = "Termino invalido"; Escribir mensaje;
+			mensaje = "Argumento invalido"; Escribir mensaje;
 		FinSi
 	FinSi
 FinFuncion
@@ -522,16 +524,16 @@ FinFuncion
 
 // Acerca de VALOR ABSOLUTO
 Funcion acerca_de_valor_absoluto()
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Algoritmo para cambiar el signo de un numero.";
 	Escribir "Toma un solo factor como argumento, y regresa lectura, validacion, calculo e impresion";
-    Esperar 500 Milisegundos;
+	Escribir "El argumento soporta 64 bits, es decir, numeros entre -9223372036854775808 y +9223372036854775807";
+    Esperar 300 Milisegundos;
 FinFuncion
-
 
 
 
@@ -553,9 +555,7 @@ Funcion modulo()
 	FinMientras
 	
 	resultado_modulo = calculo_operacion_modulo(dividendo, divisor);
-	imprimir_operacion_modulo(resultado_modulo, dividendo, divisor);
-	//acerca_de_modulo();
-	
+	imprimir_operacion_modulo(resultado_modulo, dividendo, divisor);	
 FinFuncion
 
 // Lectura MODULO
@@ -571,12 +571,14 @@ FinFuncion
 // Validacion MODULO
 Funcion validador_modulo = validar_datos_modulo(dividendo Por Valor, divisor Por Valor)
     Definir validador_modulo Como Logico;
-    Si (dividendo <> 0) Entonces
+    Si (divisor <> 0 & divisor >= -9223372036854775808 & divisor <= +9223372036854775807) & (dividendo >= -9223372036854775808 & dividendo <= +9223372036854775807) Entonces // 64 bit, divisor <> 0
         validador_modulo = Verdadero;
         Escribir "Valor del divisor invalido";
-        Esperar 500 Milisegundos;
+        Esperar 300 Milisegundos;
     SiNo
         validador_modulo = Falso;
+		Escribir "Argumento invalido";
+		acerca_de_modulo();
     FinSi
 FinFuncion
 
@@ -597,14 +599,15 @@ FinFuncion
 
 // Acerca de MODULO
 Funcion acerca_de_modulo()
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Algoritmo para calcular el modulo entre dos numeros.";
 	Escribir "Toma dividendo y divisor como argumentos, y regresa lectura, validacion, calculo e impresion.";
-    Esperar 500 Milisegundos;
+	Escribir "Ambos argumentos, dividendo y divisor soportan 64 bits, es decir, numeros entre -9223372036854775808 y +9223372036854775807 (excepto divisor = 0)";
+	Esperar 300 Milisegundos;
 FinFuncion
 
 
@@ -626,7 +629,6 @@ Funcion redondear()
 	FinMientras	
 	resultado_redondear = calculo_operacion_redondear(termino);
 	imprimir_operacion_redondear(resultado_redondear, termino);
-	//acerca_de_valor_absoluto();
 FinFuncion
 
 // Lectura REDONDEAR
@@ -641,10 +643,11 @@ Funcion validador_redondear = validar_datos_redondear(termino Por Valor)
     Definir validador_redondear Como Logico;
     Si (termino >= -9223372036854775808 & termino <= 9223372036854775807) Entonces // 64 bits
         validador_redondear = Verdadero;       
-        Esperar 500 Milisegundos;
+        Esperar 300 Milisegundos;
     SiNo
         validador_redondear = Falso;
-		Escribir "Termino invalido";
+		Escribir "Argumento invalido";
+		acerca_de_redondear();
     FinSi
 FinFuncion
 
@@ -666,14 +669,15 @@ FinFuncion
 
 // Acerca de REDONDEAR
 Funcion acerca_de_redondear()
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Algoritmo para redondear un numero.";
 	Escribir "Toma un solo termino como argumento, y regresa lectura, validacion, calculo e impresion";
-    Esperar 500 Milisegundos;
+	Escribir "El argumento soporta 64 bits, es decir, numeros entre -9223372036854775808 y +9223372036854775807";
+    Esperar 300 Milisegundos;
 FinFuncion
 
 
@@ -694,8 +698,7 @@ Funcion parte_entera()
 		validador_parte_entera = validar_datos_parte_entera(termino);
 	FinMientras	
 	resultado_parte_entera = calculo_operacion_parte_entera(termino);
-	imprimir_operacion_parte_entera(resultado_parte_entera, termino);
-	//acerca_de_parte_entera();
+	imprimir_operacion_parte_entera(resultado_parte_entera, termino);	
 FinFuncion
 
 // Lectura PARTE ENTERA
@@ -710,10 +713,11 @@ Funcion validador_parte_entera = validar_datos_parte_entera(termino Por Valor)
     Definir validador_parte_entera Como Logico;
     Si (termino >= -9223372036854775808 & termino <= 9223372036854775807) Entonces // 64 bits
         validador_parte_entera = Verdadero;       
-        Esperar 500 Milisegundos;
+        Esperar 300 Milisegundos;
     SiNo
         validador_parte_entera = Falso;
-		Escribir "Termino invalido";
+		Escribir "Argumento invalido";
+		acerca_de_parte_entera();
     FinSi
 FinFuncion
 
@@ -735,14 +739,15 @@ FinFuncion
 
 // Acerca de PARTE ENTERA
 Funcion acerca_de_parte_entera()
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Algoritmo para obtener la parte entera de un numero.";
 	Escribir "Toma un solo termino como argumento, y regresa lectura, validacion, calculo e impresion";
-    Esperar 500 Milisegundos;
+	Escribir "El argumento soporta 64 bits, es decir, numeros entre -9223372036854775808 y +9223372036854775807";
+    Esperar 300 Milisegundos;
 FinFuncion
 
 
@@ -765,7 +770,6 @@ Funcion potencia_n()
 	FinMientras	
 	resultado_potencia_n = calculo_operacion_potencia_n(base, exponente);
 	imprimir_operacion_potencia_n(resultado_potencia_n, base, exponente);
-	//acerca_de_potencia_n();
 FinFuncion
 
 // Lectura POTENCIA N
@@ -782,10 +786,11 @@ Funcion validador_potencia_n = validar_datos_potencia_n(base Por Valor, exponent
     Definir validador_potencia_n Como Logico;
     Si (base >= -2147483648 & base <= 2147483647 ) & (exponente >= -128 & exponente <= 127 ) Entonces // 32 bits para la base, 8 bits para el exponente
         validador_potencia_n = Verdadero;       
-        Esperar 500 Milisegundos;
+        Esperar 300 Milisegundos;
     SiNo
         validador_potencia_n = Falso;
-		Escribir "Valor de algunos de los elementos es invalido  (base: -2147483648 a 2147483647 | exponente: -128 a 127)";
+		Escribir "Argumento invalido";
+		acerca_de_potencia_n();
     FinSi
 FinFuncion
 
@@ -807,14 +812,15 @@ FinFuncion
 
 // Acerca de POTENCIA N
 Funcion acerca_de_potencia_n()
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Algoritmo para la multiplicacion de dos numeros.";
 	Escribir "Toma dos factores como argumentos, y regresa lectura, validacion, calculo e impresion";
-    Esperar 500 Milisegundos;
+	Escribir "Ambos factores soportan 64 bits, es decir, numeros entre -9223372036854775808 y +9223372036854775807";
+    Esperar 300 Milisegundos;
 FinFuncion
 
 
@@ -836,7 +842,6 @@ Funcion raiz_n()
 	FinMientras	
 	resultado_raiz_n = calculo_operacion_raiz_n(radicando, indice);
 	imprimir_operacion_raiz_n(resultado_raiz_n, radicando, indice);
-	//acerca_de_raiz_n();
 FinFuncion
 
 // Lectura RAIZ
@@ -851,12 +856,13 @@ FinFuncion
 // Validacion RAIZ
 Funcion validador_raiz_n = validar_datos_raiz_n(radicando Por Valor, indice Por Valor)
     Definir validador_raiz_n Como Logico;
-    Si (radicando >= -2147483648 & radicando <= 2147483647 ) & (indice >= -128 & indice <= 127 ) Entonces // 32 bits para el radicando, 8 bits para el indice
+    Si (indice <> 0 & indice >= -128 & indice <= 127 ) & (radicando >= -2147483648 & radicando <= 2147483647 ) Entonces // 32 bits para el radicando, 8 bits para el indice
         validador_raiz_n = Verdadero;       
-        Esperar 500 Milisegundos;
+        Esperar 300 Milisegundos;
     SiNo
         validador_raiz_n = Falso;
-		Escribir "Valor de algunos de los argumentos es invalido  (radicando: -2147483648 a 2147483647 | indice: -128 a 127)";
+		Escribir "Argumento invalido";
+		acerca_de_raiz_n();
     FinSi
 FinFuncion
 
@@ -878,14 +884,15 @@ FinFuncion
 
 // Acerca de RAIZ
 Funcion acerca_de_raiz_n()
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Algoritmo para la multiplicacion de dos numeros.";
 	Escribir "Toma el radicando y el indice de la raiz como argumentos, y regresa lectura, validacion, calculo e impresion";
-    Esperar 500 Milisegundos;
+	Escribir "El radicando soporta 32 bits, es decir, numeros entre -2147483648 y 2147483647, y el indice 8 bits, -128 & indice <= 127 (excepto indice = 0)";
+    Esperar 300 Milisegundos;
 FinFuncion
 
 
@@ -903,11 +910,11 @@ FinFuncion
 
 // ACERCA DEL PROGRAMA
 Funcion acerca_de_programa()
-	Esperar 500 Milisegundos;
+	Esperar 300 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Fundamentos de Programación Utilizando Herramientas Graficas.";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
     Escribir "Programa para Calcular Varias Funciones Matematicas y Estadisticas Utiles en Programacion.";
-    Esperar 500 Milisegundos;
+    Esperar 300 Milisegundos;
 FinFuncion
