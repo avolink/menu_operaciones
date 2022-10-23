@@ -15,8 +15,8 @@ Proceso menu_operaciones_main
 	mensaje = " 7 - Modulo"; Escribir mensaje;
 	mensaje = " 8 - Redondear"; Escribir mensaje;
 	mensaje = " 9 - Parte Entera"; Escribir mensaje;
-	mensaje = "10 - Potencia"; Escribir mensaje;
-	mensaje = "11 - Raiz Cuadrada"; Escribir mensaje;
+	mensaje = "10 - Potencia n"; Escribir mensaje;
+	mensaje = "11 - Raiz n"; Escribir mensaje;
 	mensaje = "12 - Generar Aleatorio"; Escribir mensaje;
 	mensaje = "23 - Seno"; Escribir mensaje;
 	mensaje = "24 - Coseno"; Escribir mensaje;
@@ -823,11 +823,10 @@ FinFuncion
 
 
 
-// FUNCION RAIZ ^ N (RADICACION O EXPONENCIACION INVERSA: 1/Raiz(base)^-n )
+// FUNCION RAIZ N (RADICACION O EXPONENCIACION INVERSA: radicado ^ ( -1/n )
 Funcion raiz_n()
 	// Funciones leer_datos_, validar_datos_, calculo_operacion_, imprimir_operacion_, acerca_de_
-	Definir radicando, indice Como Entero;
-	Definir resultado_raiz_n Como Real;
+	Definir radicando, indice, resultado_raiz_n Como Real;
 	Definir validador_raiz_n Como Logico;
 	validador_raiz_n = Falso;
 	resultado_raiz_n = 0;
@@ -852,12 +851,12 @@ FinFuncion
 // Validacion RAIZ
 Funcion validador_raiz_n = validar_datos_raiz_n(radicando Por Valor, indice Por Valor)
     Definir validador_raiz_n Como Logico;
-    Si (radicando >= -2147483648 & radicando <= 2147483647 ) & (indice >= -128 & indice <= 127 ) Entonces // 32 bits para la base, 8 bits para el exponente
+    Si (radicando >= -2147483648 & radicando <= 2147483647 ) & (indice >= -128 & indice <= 127 ) Entonces // 32 bits para el radicando, 8 bits para el indice
         validador_raiz_n = Verdadero;       
         Esperar 500 Milisegundos;
     SiNo
         validador_raiz_n = Falso;
-		Escribir "Valor de algunos de los elementos es invalido  (base: -2147483648 a 2147483647 | exponente: -128 a 127)";
+		Escribir "Valor de algunos de los argumentos es invalido  (radicando: -2147483648 a 2147483647 | indice: -128 a 127)";
     FinSi
 FinFuncion
 
@@ -865,7 +864,7 @@ FinFuncion
 Funcion resultado_raiz_n = calculo_operacion_raiz_n(radicando Por Valor, indice Por Valor)
     Definir mensaje Como Texto;
 	Definir resultado_raiz_n Como real;
-    resultado_raiz_n = 1/(radicando ^ (-indice)); // Exponenciacion Inversa
+    resultado_raiz_n = ((radicando) ^ (1/indice)); // Exponenciacion Inversa
 FinFuncion
 
 // Impresion RAIZ
