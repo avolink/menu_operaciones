@@ -37,27 +37,49 @@ Proceso menu_operaciones_main
 	
 	Segun seleccion_menu_operaciones Hacer
 		1:
+			Limpiar Pantalla;
+			Escribir "Funcion Suma";
 			suma();
 		2:
+			Limpiar Pantalla;
+			Escribir "Funcion Resta";
 			resta();
 		3:
+			Limpiar Pantalla;
+			Escribir "Funcion Multiplicacion";
 			multiplicacion();
 		4:	
+			Limpiar Pantalla;
+			Escribir "Funcion Division";
 			division();
 		5:
+			Limpiar Pantalla;
+			Escribir "Funcion Cambio de Signo";
 			cambio_signo();
 		6:
+			Limpiar Pantalla;
+			Escribir "Funcion Valor Absoluto";
 			valor_absoluto();
 		7:
+			Limpiar Pantalla;
+			Escribir "Funcion Modulo";
 			modulo();
 		8:
-			redondear();	
+			Limpiar Pantalla;
+			Escribir "Funcion Redondear";
+			redondear();
 		9:
-			parte_entera();			
+			Limpiar Pantalla;
+			Escribir "Funcion Parte Entera";
+			parte_entera();
 		10:
-			//potencia();
+			Limpiar Pantalla;
+			Escribir "Funcion Funcion Potencia n";
+			potencia_n();
 		11:
-			//raiz_cuadrada();
+			Limpiar Pantalla;
+			Escribir "Funcion Raiz n";
+			raiz_n();
 		12:
 			//generar_aleatorio();
 		13:
@@ -80,7 +102,7 @@ Proceso menu_operaciones_main
 FinProceso
 
 
-//..........................................................................................................................................
+//.............................................................................................................................................................
 
 
 // FUNCION SUMA
@@ -142,7 +164,7 @@ Funcion acerca_de_suma()
     Esperar 500 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
     Esperar 500 Milisegundos;
-    Escribir "Fundamentos de Programaci髇 Utilizando Herramientas Graficas";
+    Escribir "Fundamentos de Programaci贸n Utilizando Herramientas Graficas";
     Esperar 500 Milisegundos;
     Escribir "Algoritmo para la suma de dos numeros.";
 	Escribir "Toma minuendo y sustraendo como argumentos, y regresa lectura, validacion, calculo e impresion";
@@ -151,7 +173,7 @@ FinFuncion
 
 
 
-//...............................................................................................................................................................
+//.............................................................................................................................................................
 
 
 
@@ -215,7 +237,7 @@ Funcion acerca_de_resta()
     Esperar 500 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
     Esperar 500 Milisegundos;
-    Escribir "Fundamentos de Programaci髇 Utilizando Herramientas Graficas";
+    Escribir "Fundamentos de Programaci贸n Utilizando Herramientas Graficas";
     Esperar 500 Milisegundos;
     Escribir "Algoritmo para la resta de dos numeros.";
 	Escribir "Toma minuendo y sustraendo como argumentos, y regresa lectura, validacion, calculo e impresion";
@@ -224,7 +246,9 @@ FinFuncion
 
 
 
-//...............................................................................................................................................................
+//.............................................................................................................................................................
+
+
 
 // FUNCION MULTIPLICACION
 Funcion multiplicacion()
@@ -285,7 +309,7 @@ Funcion acerca_de_multiplicacion()
     Esperar 500 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
     Esperar 500 Milisegundos;
-    Escribir "Fundamentos de Programaci髇 Utilizando Herramientas Graficas";
+    Escribir "Fundamentos de Programaci贸n Utilizando Herramientas Graficas";
     Esperar 500 Milisegundos;
     Escribir "Algoritmo para la multiplicacion de dos numeros.";
 	Escribir "Toma dos factores como argumentos, y regresa lectura, validacion, calculo e impresion";
@@ -294,7 +318,7 @@ FinFuncion
 
 
 
-//...............................................................................................................................................................
+//.............................................................................................................................................................
 
 
 
@@ -359,7 +383,7 @@ Funcion acerca_de_division()
     Esperar 500 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
     Esperar 500 Milisegundos;
-    Escribir "Fundamentos de Programaci髇 Utilizando Herramientas Graficas";
+    Escribir "Fundamentos de Programaci贸n Utilizando Herramientas Graficas";
     Esperar 500 Milisegundos;
     Escribir "Algoritmo para calcular la division entre dos numeros.";
 	Escribir "Toma dividendo y divisor como argumentos, y regresa lectura, validacion, calculo e impresion";
@@ -368,7 +392,7 @@ FinFuncion
 
 
 
-//...............................................................................................................................................................
+//.............................................................................................................................................................
 
 
 
@@ -426,7 +450,7 @@ Funcion acerca_de_cambio_signo()
     Esperar 500 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
     Esperar 500 Milisegundos;
-    Escribir "Fundamentos de Programaci髇 Utilizando Herramientas Graficas";
+    Escribir "Fundamentos de Programaci贸n Utilizando Herramientas Graficas";
     Esperar 500 Milisegundos;
     Escribir "Algoritmo para cambiar el signo de un numero.";
 	Escribir "Toma un solo factor como argumento, y regresa lectura, validacion, calculo e impresion";
@@ -435,7 +459,7 @@ FinFuncion
 
 
 
-//...........................................................................................................................................
+//.............................................................................................................................................................
 
 
 
@@ -501,7 +525,7 @@ Funcion acerca_de_valor_absoluto()
     Esperar 500 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
     Esperar 500 Milisegundos;
-    Escribir "Fundamentos de Programaci髇 Utilizando Herramientas Graficas";
+    Escribir "Fundamentos de Programaci贸n Utilizando Herramientas Graficas";
     Esperar 500 Milisegundos;
     Escribir "Algoritmo para cambiar el signo de un numero.";
 	Escribir "Toma un solo factor como argumento, y regresa lectura, validacion, calculo e impresion";
@@ -511,7 +535,7 @@ FinFuncion
 
 
 
-//...........................................................................................................................................
+//.............................................................................................................................................................
 
 
 
@@ -576,7 +600,7 @@ Funcion acerca_de_modulo()
     Esperar 500 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
     Esperar 500 Milisegundos;
-    Escribir "Fundamentos de Programaci髇 Utilizando Herramientas Graficas";
+    Escribir "Fundamentos de Programaci贸n Utilizando Herramientas Graficas";
     Esperar 500 Milisegundos;
     Escribir "Algoritmo para calcular el modulo entre dos numeros.";
 	Escribir "Toma dividendo y divisor como argumentos, y regresa lectura, validacion, calculo e impresion.";
@@ -585,7 +609,7 @@ FinFuncion
 
 
 
-//...............................................................................................................................................................
+//.............................................................................................................................................................
 
 
 
@@ -645,7 +669,7 @@ Funcion acerca_de_redondear()
     Esperar 500 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
     Esperar 500 Milisegundos;
-    Escribir "Fundamentos de Programaci髇 Utilizando Herramientas Graficas";
+    Escribir "Fundamentos de Programaci贸n Utilizando Herramientas Graficas";
     Esperar 500 Milisegundos;
     Escribir "Algoritmo para redondear un numero.";
 	Escribir "Toma un solo termino como argumento, y regresa lectura, validacion, calculo e impresion";
@@ -654,7 +678,7 @@ FinFuncion
 
 
 
-//...............................................................................................................................................................
+//.............................................................................................................................................................
 
 
 
@@ -714,7 +738,7 @@ Funcion acerca_de_parte_entera()
     Esperar 500 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
     Esperar 500 Milisegundos;
-    Escribir "Fundamentos de Programaci髇 Utilizando Herramientas Graficas";
+    Escribir "Fundamentos de Programaci贸n Utilizando Herramientas Graficas";
     Esperar 500 Milisegundos;
     Escribir "Algoritmo para obtener la parte entera de un numero.";
 	Escribir "Toma un solo termino como argumento, y regresa lectura, validacion, calculo e impresion";
@@ -723,16 +747,159 @@ FinFuncion
 
 
 
-//...............................................................................................................................................................
+//.............................................................................................................................................................
 
 
 
-// FUNCION POTENCIA
+// FUNCION POTENCIA (EXPONENCIACION)
+Funcion potencia_n()
+	// Funciones leer_datos_, validar_datos_, calculo_operacion_, imprimir_operacion_, acerca_de_
+	Definir base, exponente Como Entero;
+	Definir resultado_potencia_n Como Real;
+	Definir validador_potencia_n Como Logico;
+	validador_potencia_n = Falso;
+	resultado_potencia_n = 0;
+	Mientras validador_potencia_n = Falso Hacer
+		leer_datos_potencia_n(base, exponente);
+		validador_potencia_n = validar_datos_potencia_n(base, exponente);
+	FinMientras	
+	resultado_potencia_n = calculo_operacion_potencia_n(base, exponente);
+	imprimir_operacion_potencia_n(resultado_potencia_n, base, exponente);
+	//acerca_de_potencia_n();
+FinFuncion
+
+// Lectura POTENCIA N
+Funcion leer_datos_potencia_n(base Por Referencia exponente Por Referencia)
+    Escribir "Ingrese el valor de la base";
+    leer base;
+    Escribir "Ingrese el valor del exponente";
+    leer exponente;
+    Limpiar Pantalla;
+FinFuncion
+
+// Validacion POTENCIA N
+Funcion validador_potencia_n = validar_datos_potencia_n(base Por Valor, exponente Por Valor)
+    Definir validador_potencia_n Como Logico;
+    Si (base >= -2147483648 & base <= 2147483647 ) & (exponente >= -128 & exponente <= 127 ) Entonces // 32 bits para la base, 8 bits para el exponente
+        validador_potencia_n = Verdadero;       
+        Esperar 500 Milisegundos;
+    SiNo
+        validador_potencia_n = Falso;
+		Escribir "Valor de algunos de los elementos es invalido  (base: -2147483648 a 2147483647 | exponente: -128 a 127)";
+    FinSi
+FinFuncion
+
+// Calculo POTENCIA N
+Funcion resultado_potencia_n = calculo_operacion_potencia_n(base Por Valor, exponente Por Valor)
+    Definir mensaje Como Texto;
+	Definir resultado_potencia_n Como real;
+    resultado_potencia_n = base ^ exponente;
+FinFuncion
+
+// Impresion POTENCIA N
+Funcion imprimir_operacion_potencia_n(resultado_potencia_n Por Valor, base Por Valor, exponente Por Valor)
+    Definir mensaje Como Texto;
+    Escribir "El resultado de la exponenciacion del numero: ", base, " al exponente: ", exponente ," es igual a " , resultado_potencia_n;
+    mensaje = "La base es: "+ConvertirATexto(base); Escribir mensaje;
+	mensaje = "El exponente es: "+ConvertirATexto(exponente); Escribir mensaje;
+	mensaje = "El resultado de la exponenciacion es: "+ConvertirATexto(resultado_potencia_n); Escribir mensaje;
+FinFuncion
+
+// Acerca de POTENCIA N
+Funcion acerca_de_potencia_n()
+    Esperar 500 Milisegundos;
+    Escribir "Por: Juan David Gutierrez N.";
+    Esperar 500 Milisegundos;
+    Escribir "Fundamentos de Programaci贸n Utilizando Herramientas Graficas";
+    Esperar 500 Milisegundos;
+    Escribir "Algoritmo para la multiplicacion de dos numeros.";
+	Escribir "Toma dos factores como argumentos, y regresa lectura, validacion, calculo e impresion";
+    Esperar 500 Milisegundos;
+FinFuncion
 
 
 
-//...............................................................................................................................................................
+//.............................................................................................................................................................
 
+
+
+// FUNCION RAIZ ^ N (RADICACION O EXPONENCIACION INVERSA: 1/Raiz(base)^-n )
+Funcion raiz_n()
+	// Funciones leer_datos_, validar_datos_, calculo_operacion_, imprimir_operacion_, acerca_de_
+	Definir radicando, indice Como Entero;
+	Definir resultado_raiz_n Como Real;
+	Definir validador_raiz_n Como Logico;
+	validador_raiz_n = Falso;
+	resultado_raiz_n = 0;
+	Mientras validador_raiz_n = Falso Hacer
+		leer_datos_raiz_n(radicando, indice);
+		validador_raiz_n = validar_datos_raiz_n(radicando, indice);
+	FinMientras	
+	resultado_raiz_n = calculo_operacion_raiz_n(radicando, indice);
+	imprimir_operacion_raiz_n(resultado_raiz_n, radicando, indice);
+	//acerca_de_raiz_n();
+FinFuncion
+
+// Lectura RAIZ
+Funcion leer_datos_raiz_n(radicando Por Referencia indice Por Referencia)
+    Escribir "Ingrese el valor del radicando";
+    leer radicando;
+    Escribir "Ingrese el valor del indice";
+    leer indice;
+    Limpiar Pantalla;
+FinFuncion
+
+// Validacion RAIZ
+Funcion validador_raiz_n = validar_datos_raiz_n(radicando Por Valor, indice Por Valor)
+    Definir validador_raiz_n Como Logico;
+    Si (radicando >= -2147483648 & radicando <= 2147483647 ) & (indice >= -128 & indice <= 127 ) Entonces // 32 bits para la base, 8 bits para el exponente
+        validador_raiz_n = Verdadero;       
+        Esperar 500 Milisegundos;
+    SiNo
+        validador_raiz_n = Falso;
+		Escribir "Valor de algunos de los elementos es invalido  (base: -2147483648 a 2147483647 | exponente: -128 a 127)";
+    FinSi
+FinFuncion
+
+// Calculo RAIZ
+Funcion resultado_raiz_n = calculo_operacion_raiz_n(radicando Por Valor, indice Por Valor)
+    Definir mensaje Como Texto;
+	Definir resultado_raiz_n Como real;
+    resultado_raiz_n = 1/(radicando ^ (-indice)); // Exponenciacion Inversa
+FinFuncion
+
+// Impresion RAIZ
+Funcion imprimir_operacion_raiz_n(resultado_raiz_n Por Valor, radicando Por Valor, indice Por Valor)
+    Definir mensaje Como Texto;
+    Escribir "El resultado de la raiz indice: ", indice, " del radicando: ", radicando," es igual a " , resultado_raiz_n;
+    mensaje = "El radicando es: "+ConvertirATexto(radicando); Escribir mensaje;
+	mensaje = "El indice de la raiz es: "+ConvertirATexto(indice); Escribir mensaje;
+	mensaje = "El resultado de la raiz es: "+ConvertirATexto(resultado_raiz_n); Escribir mensaje;
+FinFuncion
+
+// Acerca de RAIZ
+Funcion acerca_de_raiz_n()
+    Esperar 500 Milisegundos;
+    Escribir "Por: Juan David Gutierrez N.";
+    Esperar 500 Milisegundos;
+    Escribir "Fundamentos de Programaci贸n Utilizando Herramientas Graficas";
+    Esperar 500 Milisegundos;
+    Escribir "Algoritmo para la multiplicacion de dos numeros.";
+	Escribir "Toma el radicando y el indice de la raiz como argumentos, y regresa lectura, validacion, calculo e impresion";
+    Esperar 500 Milisegundos;
+FinFuncion
+
+
+
+//.............................................................................................................................................................
+
+
+
+// GENERAR NUMERO ALEATORIO
+
+
+
+//.............................................................................................................................................................
 
 
 // ACERCA DEL PROGRAMA
@@ -740,7 +907,7 @@ Funcion acerca_de_programa()
 	Esperar 500 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
     Esperar 500 Milisegundos;
-    Escribir "Fundamentos de Programaci髇 Utilizando Herramientas Graficas.";
+    Escribir "Fundamentos de Programaci贸n Utilizando Herramientas Graficas.";
     Esperar 500 Milisegundos;
     Escribir "Programa para Calcular Varias Funciones Matematicas y Estadisticas Utiles en Programacion.";
     Esperar 500 Milisegundos;
