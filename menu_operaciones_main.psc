@@ -11,30 +11,42 @@ Proceso menu_operaciones_main
 	mensaje = " 2 - Resta"; Escribir mensaje;
 	mensaje = " 3 - Multiplicacion"; Escribir mensaje;
 	mensaje = " 4 - Division"; Escribir mensaje;
-	mensaje = " 5 - Cambio de Signo"; Escribir mensaje;
+	mensaje = " 5 - Cambio Signo"; Escribir mensaje;
 	mensaje = " 6 - Valor Absoluto"; Escribir mensaje;
 	mensaje = " 7 - Modulo"; Escribir mensaje;
 	mensaje = " 8 - Redondear"; Escribir mensaje;
 	mensaje = " 9 - Parte Entera"; Escribir mensaje;
 	mensaje = "10 - Potencia n"; Escribir mensaje;
 	mensaje = "11 - Raiz n"; Escribir mensaje;
-	mensaje = "12 - Generar Aleatorio"; Escribir mensaje;
+	mensaje = "12 - Numero Aleatorio"; Escribir mensaje;
 	// Funciones Trigonometricas
-	mensaje = "23 - Seno"; Escribir mensaje;
-	mensaje = "24 - Coseno"; Escribir mensaje;
-	mensaje = "25 - Tangente"; Escribir mensaje;
-	mensaje = "26 - Cotangente"; Escribir mensaje;
-	mensaje = "27 - Secante"; Escribir mensaje;
-	mensaje = "28 - Cosecante"; Escribir mensaje;
+	mensaje = "13 - Seno"; Escribir mensaje;
+	mensaje = "14 - Coseno"; Escribir mensaje;
+	mensaje = "15 - Tangente"; Escribir mensaje;
+	mensaje = "16 - Cotangente"; Escribir mensaje;
+	mensaje = "17 - Secante"; Escribir mensaje;
+	mensaje = "18 - Cosecante"; Escribir mensaje;
+	// Figuras Geometricas 2D
+	mensaje = "19 - Triangulo"; Escribir mensaje;	
+	mensaje = "20 - Rectangulo"; Escribir mensaje;
+	mensaje = "21 - Circulo"; Escribir mensaje;
+	// Figuras Geometricas 3D
+	mensaje = "22 - Hexaedro"; Escribir mensaje;
+	mensaje = "23 - Piramide"; Escribir mensaje;	
+	mensaje = "24 - Esfera"; Escribir mensaje;
 	// Funciones Estadisticas
-	mensaje = "70 - Contar"; Escribir mensaje;
-	mensaje = "71 - Promedio"; Escribir mensaje;
-	mensaje = "72 - Moda"; Escribir mensaje;
-	mensaje = "73 - Media"; Escribir mensaje;
-	mensaje = "74 - Mediana"; Escribir mensaje;
-	mensaje = "75 - Minimo"; Escribir mensaje;
-	mensaje = "76 - Maximo"; Escribir mensaje;
-	mensaje = "77 - Desviacion Estandar"; Escribir mensaje;
+	mensaje = "30 - Contar"; Escribir mensaje;
+	mensaje = "31 - Promedio"; Escribir mensaje;
+	mensaje = "32 - Moda"; Escribir mensaje;
+	mensaje = "33 - Media"; Escribir mensaje;
+	mensaje = "34 - Mediana"; Escribir mensaje;
+	mensaje = "35 - Minimo"; Escribir mensaje;
+	mensaje = "36 - Maximo"; Escribir mensaje;
+	mensaje = "37 - Desviacion Estandar"; Escribir mensaje;
+	// Funciones Inteligencia Artificial
+		// 50 a 79
+	// Otras Funciones
+		// 80 a 98
 	// Acerca de
 	mensaje = "99 - Acerca de"; Escribir mensaje;
 	Leer seleccion_menu_operaciones;
@@ -141,7 +153,7 @@ Funcion validador_suma = validar_datos_suma(sumando1 Por Valor, sumando2 Por Val
     Definir validador_suma Como Logico;
     Si (sumando1 >= -9223372036854775808 & sumando1 <= 9223372036854775807 ) & (sumando2 >= -9223372036854775808 & sumando2 <= 9223372036854775807 ) Entonces // 64 bits
         validador_suma = Verdadero;       
-        Esperar 500 Milisegundos;
+        Esperar 300 Milisegundos;
     SiNo
         validador_suma = Falso;
 		Escribir "Argumento invalido";
@@ -214,7 +226,7 @@ Funcion validador_resta = validar_datos_resta(minuendo Por Valor, sustraendo Por
     Definir validador_resta Como Logico;
     Si (minuendo  > -9223372036854775808 & minuendo <= 9223372036854775807) & (sustraendo  > -9223372036854775808 & sustraendo <= 9223372036854775807) Entonces
         validador_resta = Verdadero;
-        Esperar 500 Milisegundos;
+        Esperar 300 Milisegundos;
     SiNo
         validador_resta = Falso;
 		Escribir "Argumento invalido";
