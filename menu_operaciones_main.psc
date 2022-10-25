@@ -5,7 +5,8 @@ Proceso menu_operaciones_main
 	Definir mensaje Como Texto;
 	Definir seleccion_menu_operaciones Como Entero;
 	
-	// Menu Principal
+	// MENU PRINCIPAL	
+	// Funciones Matematicas
 	mensaje = " 1 - Suma"; Escribir mensaje;
 	mensaje = " 2 - Resta"; Escribir mensaje;
 	mensaje = " 3 - Multiplicacion"; Escribir mensaje;
@@ -18,12 +19,14 @@ Proceso menu_operaciones_main
 	mensaje = "10 - Potencia n"; Escribir mensaje;
 	mensaje = "11 - Raiz n"; Escribir mensaje;
 	mensaje = "12 - Generar Aleatorio"; Escribir mensaje;
+	// Funciones Trigonoetricas
 	mensaje = "23 - Seno"; Escribir mensaje;
 	mensaje = "24 - Coseno"; Escribir mensaje;
 	mensaje = "25 - Tangente"; Escribir mensaje;
 	mensaje = "26 - Cotangente"; Escribir mensaje;
 	mensaje = "27 - Secante"; Escribir mensaje;
 	mensaje = "28 - Cosecante"; Escribir mensaje;
+	// Funciones Estaisticas
 	mensaje = "70 - Contar"; Escribir mensaje;
 	mensaje = "71 - Promedio"; Escribir mensaje;
 	mensaje = "72 - Moda"; Escribir mensaje;
@@ -32,6 +35,7 @@ Proceso menu_operaciones_main
 	mensaje = "75 - Minimo"; Escribir mensaje;
 	mensaje = "76 - Maximo"; Escribir mensaje;
 	mensaje = "77 - Desviacion Estandar"; Escribir mensaje;
+	// Acerca de
 	mensaje = "99 - Acerca de"; Escribir mensaje;
 	Leer seleccion_menu_operaciones;
 	
@@ -81,7 +85,7 @@ Proceso menu_operaciones_main
 			Escribir "Funcion Raiz n";
 			raiz_n();
 		12:
-			//generar_aleatorio();
+			numero_aleatorio();
 		13:
 			//seno();
 		14:
@@ -902,10 +906,73 @@ FinFuncion
 
 
 // GENERAR NUMERO ALEATORIO
+Funcion numero_aleatorio()
+	// Funciones leer_datos_, validar_datos_, calculo_operacion_, imprimir_operacion_, acerca_de_
+	Definir minimo, maximo Como Entero;
+	Definir resultado_numero_aleatorio Como Real;
+	Definir validador_numero_aleatorio Como Logico;
+	validador_numero_aleatorio = Falso;
+	resultado_numero_aleatorio = 0;
+	Mientras validador_numero_aleatorio = Falso Hacer
+		leer_datos_numero_aleatorio(minimo, maximo);
+		validador_numero_aleatorio = validar_datos_numero_aleatorio(minimo, maximo);
+	FinMientras	
+	resultado_numero_aleatorio = calculo_operacion_numero_aleatorio(minimo, maximo);
+	imprimir_operacion_numero_aleatorio(resultado_numero_aleatorio, minimo, maximo);
+FinFuncion
+
+// Lectura NUMERO ALEATORIO
+Funcion leer_datos_numero_aleatorio(minimo Por Referencia, maximo Por Referencia)
+    Escribir "Ingrese el valor minimo";
+    leer minimo;
+	Escribir "Ingrese el valor maximo";
+    leer maximo;
+    Limpiar Pantalla;
+FinFuncion
+
+// Validacion NUMERO ALEATORIO
+Funcion validador_numero_aleatorio = validar_datos_numero_aleatorio(minimo Por Valor, maximo Por Valor)
+    Definir validador_numero_aleatorio Como Logico;
+    Si (minimo >= -9223372036854775808 & minimo <= 9223372036854775807) & (maximo >= -9223372036854775808 & maximo <= 9223372036854775807) Entonces // 64 bits
+        validador_numero_aleatorio = Verdadero;       
+        Esperar 300 Milisegundos;
+    SiNo
+        validador_numero_aleatorio = Falso;
+		Escribir "Argumento invalido";
+		acerca_de_numero_aleatorio();
+    FinSi
+FinFuncion
+
+// Calculo NUMERO ALEATORIO
+Funcion resultado_numero_aleatorio = calculo_operacion_numero_aleatorio(minimo Por Valor, maximo Por Valor)
+    Definir mensaje Como Texto;
+	Definir resultado_numero_aleatorio Como real;
+	resultado_numero_aleatorio = Aleatorio(minimo, maximo); // 64 bits
+FinFuncion
+
+// Impresion NUMERO ALEATORIO
+Funcion imprimir_operacion_numero_aleatorio(resultado_numero_aleatorio Por Valor, minimo Por Valor, maximo Por Valor)
+    Definir mensaje Como Texto;
+	mensaje = "El resultado del numero aleatorio es: "+ConvertirATexto(resultado_numero_aleatorio); Escribir mensaje;
+FinFuncion
+
+// Acerca de NUMERO ALEATORIO
+Funcion acerca_de_numero_aleatorio()
+    Esperar 300 Milisegundos;
+    Escribir "Por: Juan David Gutierrez N.";
+    Esperar 300 Milisegundos;
+    Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
+    Esperar 300 Milisegundos;
+    Escribir "Algoritmo para generar un numero aleatorio.";
+	Escribir "Recibe un minimo y un maximo como entero, y regresa lectura, validacion, calculo e impresion";
+	Escribir "Soporta enteros de hasta 64 bits, es decir, numeros sin cifras decimales entre -9223372036854775808 y +9223372036854775807";
+    Esperar 300 Milisegundos;
+FinFuncion
 
 
 
 //.............................................................................................................................................................
+
 
 
 // ACERCA DEL PROGRAMA
