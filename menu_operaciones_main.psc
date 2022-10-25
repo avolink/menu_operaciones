@@ -19,14 +19,14 @@ Proceso menu_operaciones_main
 	mensaje = "10 - Potencia n"; Escribir mensaje;
 	mensaje = "11 - Raiz n"; Escribir mensaje;
 	mensaje = "12 - Generar Aleatorio"; Escribir mensaje;
-	// Funciones Trigonoetricas
+	// Funciones Trigonometricas
 	mensaje = "23 - Seno"; Escribir mensaje;
 	mensaje = "24 - Coseno"; Escribir mensaje;
 	mensaje = "25 - Tangente"; Escribir mensaje;
 	mensaje = "26 - Cotangente"; Escribir mensaje;
 	mensaje = "27 - Secante"; Escribir mensaje;
 	mensaje = "28 - Cosecante"; Escribir mensaje;
-	// Funciones Estaisticas
+	// Funciones Estadisticas
 	mensaje = "70 - Contar"; Escribir mensaje;
 	mensaje = "71 - Promedio"; Escribir mensaje;
 	mensaje = "72 - Moda"; Escribir mensaje;
