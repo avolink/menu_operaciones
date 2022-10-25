@@ -85,6 +85,8 @@ Proceso menu_operaciones_main
 			Escribir "Funcion Raiz n";
 			raiz_n();
 		12:
+			Limpiar Pantalla;
+			Escribir "Numero Aleatorio";
 			numero_aleatorio();
 		13:
 			//seno();
