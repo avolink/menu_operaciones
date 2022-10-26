@@ -101,13 +101,21 @@ Proceso menu_operaciones_main
 			Escribir "Numero Aleatorio";
 			numero_aleatorio();
 		13:
+			Limpiar Pantalla;
+			Escribir "Seno";
 			seno();
 		14:
+			Limpiar Pantalla;
+			Escribir "Numero Aleatorio";
 			coseno();
 		15:
+			Limpiar Pantalla;
+			Escribir "Tangente";
 			tangente();
 		16:
-			contangente();
+			Limpiar Pantalla;
+			Escribir "Cotangente";
+			cotangente();
 		17:
 			secante();
 		18:
@@ -1234,8 +1242,8 @@ Funcion validador_cotangente = validar_datos_cotangente(angulo Por Valor)
 FinFuncion
 
 // Calculo COTANGENTE
-Funcion resultado_cotangente = calculo_operacion_cotangente(termino Por Valor)
-    Definir mensaje Como Texto;
+Funcion resultado_cotangente = calculo_operacion_cotangente(angulo Por Valor)
+	Definir mensaje Como Texto;
 	Definir resultado_cotangente Como real;
 	
 	resultado_cotangente = 1/TAN(angulo);
@@ -1382,15 +1390,15 @@ Funcion resultado_cosecante = calculo_operacion_cosecante(termino Por Valor)
 	
 FinFuncion
 
-// Impresion SECANTE
-Funcion imprimir_operacion_secante(resultado_secante Por Valor, angulo Por Valor)
+// Impresion COSECANTE
+Funcion imprimir_operacion_cosecante(resultado_cosecante Por Valor, angulo Por Valor)
     Definir mensaje Como Texto;   
     mensaje = "El termino es: "+ConvertirATexto(angulo); Escribir mensaje;	
-	mensaje = "El resultado del seno del angulo es: "+ConvertirATexto(resultado_secante); Escribir mensaje;
+	mensaje = "El resultado del seno del angulo es: "+ConvertirATexto(resultado_cosecante); Escribir mensaje;
 FinFuncion
 
-// Acerca de SECANTE
-Funcion acerca_de_secante()
+// Acerca de COSECANTE
+Funcion acerca_de_cosecante()
     Esperar 300 Milisegundos;
     Escribir "Por: Juan David Gutierrez N.";
     Esperar 300 Milisegundos;
