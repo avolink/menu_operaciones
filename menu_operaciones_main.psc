@@ -117,12 +117,17 @@ Proceso menu_operaciones_main
 			Escribir "Cotangente";
 			cotangente();
 		17:
+			Limpiar Pantalla;
+			Escribir "Secante";
 			secante();
 		18:
+			Limpiar Pantalla;
+			Escribir "Cosecante";
 			cosecante();
 		99:
+			Limpiar Pantalla;
 			acerca_de_programa();
-		De Otro Modo:
+		De Otro Modo:			
 			Escribir "Seleccion invalida";
 	FinSegun	
 FinProceso
