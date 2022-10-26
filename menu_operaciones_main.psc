@@ -44,9 +44,9 @@ Proceso menu_operaciones_main
 	mensaje = "36 - Maximo"; Escribir mensaje;
 	mensaje = "37 - Desviacion Estandar"; Escribir mensaje;
 	// Funciones Inteligencia Artificial
-		// 50 a 79
+	// 50 a 79
 	// Otras Funciones
-		// 80 a 98
+	// 80 a 98
 	// Acerca de
 	mensaje = "99 - Acerca de"; Escribir mensaje;
 	Leer seleccion_menu_operaciones;
@@ -101,17 +101,17 @@ Proceso menu_operaciones_main
 			Escribir "Numero Aleatorio";
 			numero_aleatorio();
 		13:
-			//seno();
+			seno();
 		14:
-			//coseno();
+			coseno();
 		15:
-			//tangente();
+			tangente();
 		16:
-			//contangente();
+			contangente();
 		17:
-			//secante();
+			secante();
 		18:
-			//cosecante();
+			cosecante();
 		99:
 			acerca_de_programa();
 		De Otro Modo:
@@ -131,7 +131,7 @@ Funcion suma()
 	Definir validador_suma Como Logico;
 	validador_suma = Falso;
 	resultado_suma = 0;
-	Mientras validador_suma=Falso Hacer
+	Mientras validador_suma = Falso Hacer
 		leer_datos_suma(sumando1, sumando2);
 		validador_suma = validar_datos_suma(sumando1, sumando2);
 	FinMientras	
@@ -508,7 +508,7 @@ FinFuncion
 // Validacion VALOR ABSOLUTO
 Funcion validador_valor_absoluto = validar_datos_valor_absoluto(termino Por Valor)
     Definir validador_valor_absoluto Como Logico;
-    Si (factor >= -9223372036854775808 & factor <= 9223372036854775807) Entonces // 64 bits
+    Si (termino >= -9223372036854775808 & termino <= 9223372036854775807) Entonces // 64 bits
         validador_valor_absoluto = Verdadero;       
         Esperar 300 Milisegundos;
     SiNo
@@ -980,6 +980,425 @@ Funcion acerca_de_numero_aleatorio()
     Escribir "Algoritmo para generar un numero aleatorio.";
 	Escribir "Recibe un minimo y un maximo como entero, y regresa lectura, validacion, calculo e impresion";
 	Escribir "Soporta enteros de hasta 64 bits, es decir, numeros sin cifras decimales entre -9223372036854775808 y +9223372036854775807";
+    Esperar 300 Milisegundos;
+FinFuncion
+
+
+
+//.............................................................................................................................................................
+
+
+
+// FUNCION SENO
+Funcion seno()
+	// Funciones leer_datos_, validar_datos_, calculo_operacion_, imprimir_operacion_, acerca_de_
+	Definir angulo, resultado_seno Como Real;
+	Definir validador_seno Como Logico;
+	validador_seno = Falso;
+	resultado_seno = 0;
+	Mientras validador_seno = Falso Hacer
+		leer_datos_seno(angulo);
+		validador_seno = validar_datos_seno(angulo);
+	FinMientras	
+	resultado_seno = calculo_operacion_seno(angulo);
+	imprimir_operacion_seno(resultado_seno, angulo);
+FinFuncion
+
+// Lectura SENO
+Funcion leer_datos_seno(angulo Por Referencia)
+    Escribir "Ingrese el valor del termino";
+    leer angulo;    
+    Limpiar Pantalla;
+FinFuncion
+
+// Validacion SENO
+Funcion validador_seno = validar_datos_seno(angulo Por Valor)
+    Definir validador_seno Como Logico;
+    Si (angulo >= -360 & angulo <= 360) Entonces // 360 grados angulares (NO radianes)
+        validador_seno = Verdadero;
+        Esperar 300 Milisegundos;
+    SiNo
+        validador_seno = Falso;
+		Escribir "Argumento invalido";
+		acerca_de_seno();
+    FinSi
+FinFuncion
+
+// Calculo SENO
+Funcion resultado_seno = calculo_operacion_seno(termino Por Valor)
+    Definir mensaje Como Texto;
+	Definir resultado_seno Como real;
+	
+	resultado_seno = SEN(angulo);
+	
+FinFuncion
+
+// Impresion SENO
+Funcion imprimir_operacion_seno(resultado_seno Por Valor, angulo Por Valor)
+    Definir mensaje Como Texto;   
+    mensaje = "El termino es: "+ConvertirATexto(angulo); Escribir mensaje;	
+	mensaje = "El resultado del seno del angulo es: "+ConvertirATexto(resultado_seno); Escribir mensaje;
+FinFuncion
+
+// Acerca de SENO
+Funcion acerca_de_seno()
+    Esperar 300 Milisegundos;
+    Escribir "Por: Juan David Gutierrez N.";
+    Esperar 300 Milisegundos;
+    Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
+    Esperar 300 Milisegundos;
+    Escribir "Algoritmo para calcular el seno de un angulo.";
+	Escribir "Toma un angulo como argumento, y regresa lectura, validacion, calculo e impresion";
+	Escribir "El angulo debe ser escrito en grados angulares, NO radianes, es decir, numeros entre -360 y +360";
+    Esperar 300 Milisegundos;
+FinFuncion
+
+
+
+//.............................................................................................................................................................
+
+
+
+// FUNCION COSENO
+Funcion coseno()
+	// Funciones leer_datos_, validar_datos_, calculo_operacion_, imprimir_operacion_, acerca_de_
+	Definir angulo, resultado_coseno Como Real;
+	Definir validador_coseno Como Logico;
+	validador_coseno = Falso;
+	resultado_coseno = 0;
+	Mientras validador_coseno = Falso Hacer
+		leer_datos_coseno(angulo);
+		validador_coseno = validar_datos_coseno(angulo);
+	FinMientras	
+	resultado_coseno = calculo_operacion_coseno(angulo);
+	imprimir_operacion_coseno(resultado_coseno, angulo);
+FinFuncion
+
+// Lectura COSENO
+Funcion leer_datos_coseno(angulo Por Referencia)
+    Escribir "Ingrese el valor del termino";
+    leer angulo;    
+    Limpiar Pantalla;
+FinFuncion
+
+// Validacion COSENO
+Funcion validador_coseno = validar_datos_coseno(angulo Por Valor)
+    Definir validador_coseno Como Logico;
+    Si (angulo >= -360 & angulo <= 360) Entonces // 360 grados angulares (NO radianes)
+        validador_coseno = Verdadero;
+        Esperar 300 Milisegundos;
+    SiNo
+        validador_coseno = Falso;
+		Escribir "Argumento invalido";
+		acerca_de_coseno();
+    FinSi
+FinFuncion
+
+// Calculo COSENO
+Funcion resultado_coseno = calculo_operacion_coseno(termino Por Valor)
+    Definir mensaje Como Texto;
+	Definir resultado_coseno Como real;
+	
+	resultado_coseno = COS(angulo);
+	
+FinFuncion
+
+// Impresion COSENO
+Funcion imprimir_operacion_coseno(resultado_coseno Por Valor, angulo Por Valor)
+    Definir mensaje Como Texto;   
+    mensaje = "El termino es: "+ConvertirATexto(angulo); Escribir mensaje;	
+	mensaje = "El resultado del seno del angulo es: "+ConvertirATexto(resultado_coseno); Escribir mensaje;
+FinFuncion
+
+// Acerca de COSENO
+Funcion acerca_de_coseno()
+    Esperar 300 Milisegundos;
+    Escribir "Por: Juan David Gutierrez N.";
+    Esperar 300 Milisegundos;
+    Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
+    Esperar 300 Milisegundos;
+    Escribir "Algoritmo para calcular el coseno de un angulo.";
+	Escribir "Toma un angulo como argumento, y regresa lectura, validacion, calculo e impresion";
+	Escribir "El angulo debe ser escrito en grados angulares, NO radianes, es decir, numeros entre -360 y +360";
+    Esperar 300 Milisegundos;
+FinFuncion
+
+
+//.............................................................................................................................................................
+
+
+
+// FUNCION TANGENTE
+Funcion tangente()
+	// Funciones leer_datos_, validar_datos_, calculo_operacion_, imprimir_operacion_, acerca_de_
+	Definir angulo, resultado_tangente Como Real;
+	Definir validador_tangente Como Logico;
+	validador_tangente = Falso;
+	resultado_tangente = 0;
+	Mientras validador_tangente = Falso Hacer
+		leer_datos_tangente(angulo);
+		validador_tangente = validar_datos_tangente(angulo);
+	FinMientras	
+	resultado_tangente = calculo_operacion_tangente(angulo);
+	imprimir_operacion_tangente(resultado_tangente, angulo);
+FinFuncion
+
+// Lectura TANGENTE
+Funcion leer_datos_tangente(angulo Por Referencia)
+    Escribir "Ingrese el valor del termino";
+    leer angulo;    
+    Limpiar Pantalla;
+FinFuncion
+
+// Validacion TANGENTE
+Funcion validador_tangente = validar_datos_tangente(angulo Por Valor)
+    Definir validador_tangente Como Logico;
+    Si (angulo >= -360 & angulo <= 360) Entonces // 360 grados angulares (NO radianes)
+        validador_tangente = Verdadero;
+        Esperar 300 Milisegundos;
+    SiNo
+        validador_tangente = Falso;
+		Escribir "Argumento invalido";
+		acerca_de_tangente();
+    FinSi
+FinFuncion
+
+// Calculo TANGENTE
+Funcion resultado_tangente = calculo_operacion_tangente(termino Por Valor)
+    Definir mensaje Como Texto;
+	Definir resultado_tangente Como real;
+	
+	resultado_tangente = TAN(angulo);
+	
+FinFuncion
+
+// Impresion TANGENTE
+Funcion imprimir_operacion_tangente(resultado_tangente Por Valor, angulo Por Valor)
+    Definir mensaje Como Texto;   
+    mensaje = "El termino es: "+ConvertirATexto(angulo); Escribir mensaje;	
+	mensaje = "El resultado del seno del angulo es: "+ConvertirATexto(resultado_tangente); Escribir mensaje;
+FinFuncion
+
+// Acerca de TANGENTE
+Funcion acerca_de_tangente()
+    Esperar 300 Milisegundos;
+    Escribir "Por: Juan David Gutierrez N.";
+    Esperar 300 Milisegundos;
+    Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
+    Esperar 300 Milisegundos;
+    Escribir "Algoritmo para calcular la tangente de un angulo.";
+	Escribir "Toma un angulo como argumento, y regresa lectura, validacion, calculo e impresion";
+	Escribir "El angulo debe ser escrito en grados angulares, NO radianes, es decir, numeros entre -360 y +360";
+    Esperar 300 Milisegundos;
+FinFuncion
+
+
+
+//.............................................................................................................................................................
+
+
+
+// FUNCION COTANGENTE
+Funcion cotangente()
+	// Funciones leer_datos_, validar_datos_, calculo_operacion_, imprimir_operacion_, acerca_de_
+	Definir angulo, resultado_cotangente Como Real;
+	Definir validador_cotangente Como Logico;
+	validador_cotangente = Falso;
+	resultado_cotangente = 0;
+	Mientras validador_cotangente = Falso Hacer
+		leer_datos_cotangente(angulo);
+		validador_cotangente = validar_datos_cotangente(angulo);
+	FinMientras	
+	resultado_cotangente = calculo_operacion_cotangente(angulo);
+	imprimir_operacion_cotangente(resultado_cotangente, angulo);
+FinFuncion
+
+// Lectura TANGENTE
+Funcion leer_datos_cotangente(angulo Por Referencia)
+    Escribir "Ingrese el valor del termino";
+    leer angulo;    
+    Limpiar Pantalla;
+FinFuncion
+
+// Validacion COTANGENTE
+Funcion validador_cotangente = validar_datos_cotangente(angulo Por Valor)
+    Definir validador_cotangente Como Logico;
+    Si (angulo >= -360 & angulo <= 360) Entonces // 360 grados angulares (NO radianes)
+        validador_cotangente = Verdadero;
+        Esperar 300 Milisegundos;
+    SiNo
+        validador_cotangente = Falso;
+		Escribir "Argumento invalido";
+		acerca_de_cotangente();
+    FinSi
+FinFuncion
+
+// Calculo COTANGENTE
+Funcion resultado_cotangente = calculo_operacion_cotangente(termino Por Valor)
+    Definir mensaje Como Texto;
+	Definir resultado_cotangente Como real;
+	
+	resultado_cotangente = 1/TAN(angulo);
+	
+FinFuncion
+
+// Impresion COTANGENTE
+Funcion imprimir_operacion_cotangente(resultado_cotangente Por Valor, angulo Por Valor)
+    Definir mensaje Como Texto;   
+    mensaje = "El termino es: "+ConvertirATexto(angulo); Escribir mensaje;	
+	mensaje = "El resultado del seno del angulo es: "+ConvertirATexto(resultado_cotangente); Escribir mensaje;
+FinFuncion
+
+// Acerca de COTANGENTE
+Funcion acerca_de_cotangente()
+    Esperar 300 Milisegundos;
+    Escribir "Por: Juan David Gutierrez N.";
+    Esperar 300 Milisegundos;
+    Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
+    Esperar 300 Milisegundos;
+    Escribir "Algoritmo para calcular la cotangente de un angulo.";
+	Escribir "Toma un angulo como argumento, y regresa lectura, validacion, calculo e impresion";
+	Escribir "El angulo debe ser escrito en grados angulares, NO radianes, es decir, numeros entre -360 y +360";
+    Esperar 300 Milisegundos;
+FinFuncion
+
+
+
+//.............................................................................................................................................................
+
+
+
+// FUNCION SECANTE
+Funcion secante()
+	// Funciones leer_datos_, validar_datos_, calculo_operacion_, imprimir_operacion_, acerca_de_
+	Definir angulo, resultado_secante Como Real;
+	Definir validador_secante Como Logico;
+	validador_secante = Falso;
+	resultado_secante = 0;
+	Mientras validador_secante = Falso Hacer
+		leer_datos_secante(angulo);
+		validador_secante = validar_datos_secante(angulo);
+	FinMientras	
+	resultado_secante = calculo_operacion_secante(angulo);
+	imprimir_operacion_secante(resultado_secante, angulo);
+FinFuncion
+
+// Lectura SECANTE
+Funcion leer_datos_secante(angulo Por Referencia)
+    Escribir "Ingrese el valor del termino";
+    leer angulo;    
+    Limpiar Pantalla;
+FinFuncion
+
+// Validacion SECANTE
+Funcion validador_secante = validar_datos_secante(angulo Por Valor)
+    Definir validador_secante Como Logico;
+    Si (angulo >= -360 & angulo <= 360) Entonces // 360 grados angulares (NO radianes)
+        validador_secante = Verdadero;
+        Esperar 300 Milisegundos;
+    SiNo
+        validador_secante = Falso;
+		Escribir "Argumento invalido";
+		acerca_de_secante();
+    FinSi
+FinFuncion
+
+// Calculo SECANTE
+Funcion resultado_secante = calculo_operacion_secante(termino Por Valor)
+    Definir mensaje Como Texto;
+	Definir resultado_secante Como real;
+	
+	resultado_secante = 1/COS(angulo);
+	
+FinFuncion
+
+// Impresion SECANTE
+Funcion imprimir_operacion_secante(resultado_secante Por Valor, angulo Por Valor)
+    Definir mensaje Como Texto;   
+    mensaje = "El termino es: "+ConvertirATexto(angulo); Escribir mensaje;	
+	mensaje = "El resultado del seno del angulo es: "+ConvertirATexto(resultado_secante); Escribir mensaje;
+FinFuncion
+
+// Acerca de SECANTE
+Funcion acerca_de_secante()
+    Esperar 300 Milisegundos;
+    Escribir "Por: Juan David Gutierrez N.";
+    Esperar 300 Milisegundos;
+    Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
+    Esperar 300 Milisegundos;
+    Escribir "Algoritmo para calcular la cotangente de un angulo.";
+	Escribir "Toma un angulo como argumento, y regresa lectura, validacion, calculo e impresion";
+	Escribir "El angulo debe ser escrito en grados angulares, NO radianes, es decir, numeros entre -360 y +360";
+    Esperar 300 Milisegundos;
+FinFuncion
+
+
+
+//.............................................................................................................................................................
+
+
+
+// FUNCION COSECANTE
+Funcion cosecante()
+	// Funciones leer_datos_, validar_datos_, calculo_operacion_, imprimir_operacion_, acerca_de_
+	Definir angulo, resultado_cosecante Como Real;
+	Definir validador_cosecante Como Logico;
+	validador_cosecante = Falso;
+	resultado_cosecante = 0;
+	Mientras validador_cosecante = Falso Hacer
+		leer_datos_cosecante(angulo);
+		validador_cosecante = validar_datos_cosecante(angulo);
+	FinMientras	
+	resultado_cosecante = calculo_operacion_cosecante(angulo);
+	imprimir_operacion_cosecante(resultado_cosecante, angulo);
+FinFuncion
+
+// Lectura COSECANTE
+Funcion leer_datos_cosecante(angulo Por Referencia)
+    Escribir "Ingrese el valor del termino";
+    leer angulo;    
+    Limpiar Pantalla;
+FinFuncion
+
+// Validacion COSECANTE
+Funcion validador_cosecante = validar_datos_cosecante(angulo Por Valor)
+    Definir validador_cosecante Como Logico;
+    Si (angulo >= -360 & angulo <= 360) Entonces // 360 grados angulares (NO radianes)
+        validador_cosecante = Verdadero;
+        Esperar 300 Milisegundos;
+    SiNo
+        validador_cosecante = Falso;
+		Escribir "Argumento invalido";
+		acerca_de_cosecante();
+    FinSi
+FinFuncion
+
+// Calculo COSECANTE
+Funcion resultado_cosecante = calculo_operacion_cosecante(termino Por Valor)
+    Definir mensaje Como Texto;
+	Definir resultado_cosecante Como real;
+	
+	resultado_cosecante = 1/COS(angulo);
+	
+FinFuncion
+
+// Impresion SECANTE
+Funcion imprimir_operacion_secante(resultado_secante Por Valor, angulo Por Valor)
+    Definir mensaje Como Texto;   
+    mensaje = "El termino es: "+ConvertirATexto(angulo); Escribir mensaje;	
+	mensaje = "El resultado del seno del angulo es: "+ConvertirATexto(resultado_secante); Escribir mensaje;
+FinFuncion
+
+// Acerca de SECANTE
+Funcion acerca_de_secante()
+    Esperar 300 Milisegundos;
+    Escribir "Por: Juan David Gutierrez N.";
+    Esperar 300 Milisegundos;
+    Escribir "Fundamentos de Programación Utilizando Herramientas Graficas";
+    Esperar 300 Milisegundos;
+    Escribir "Algoritmo para calcular la cotangente de un angulo.";
+	Escribir "Toma un angulo como argumento, y regresa lectura, validacion, calculo e impresion";
+	Escribir "El angulo debe ser escrito en grados angulares, NO radianes, es decir, numeros entre -360 y +360";
     Esperar 300 Milisegundos;
 FinFuncion
 
