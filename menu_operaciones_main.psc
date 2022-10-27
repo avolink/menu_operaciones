@@ -1049,7 +1049,7 @@ FinFuncion
 // Impresion SENO
 Funcion imprimir_operacion_seno(resultado_seno Por Valor, angulo Por Valor)
     Definir mensaje Como Texto;   
-    mensaje = "El termino es: "+ConvertirATexto(angulo); Escribir mensaje;	
+    mensaje = "El angulo es: "+ConvertirATexto(angulo); Escribir mensaje;	
 	mensaje = "El resultado del seno del angulo es: "+ConvertirATexto(resultado_seno); Escribir mensaje;
 FinFuncion
 
@@ -1119,8 +1119,8 @@ FinFuncion
 // Impresion COSENO
 Funcion imprimir_operacion_coseno(resultado_coseno Por Valor, angulo Por Valor)
     Definir mensaje Como Texto;   
-    mensaje = "El termino es: "+ConvertirATexto(angulo); Escribir mensaje;	
-	mensaje = "El resultado del seno del angulo es: "+ConvertirATexto(resultado_coseno); Escribir mensaje;
+    mensaje = "El angulo es: "+ConvertirATexto(angulo); Escribir mensaje;	
+	mensaje = "El resultado del coseno del angulo es: "+ConvertirATexto(resultado_coseno); Escribir mensaje;
 FinFuncion
 
 // Acerca de COSENO
@@ -1159,7 +1159,7 @@ FinFuncion
 // Lectura TANGENTE
 Funcion leer_datos_tangente(angulo Por Referencia)
     Escribir "Ingrese el valor del termino";
-    leer angulo;    
+    Leer angulo;    
     Limpiar Pantalla;
 FinFuncion
 
@@ -1177,9 +1177,9 @@ Funcion validador_tangente = validar_datos_tangente(angulo Por Valor)
 FinFuncion
 
 // Calculo TANGENTE
-Funcion resultado_tangente = calculo_operacion_tangente(termino Por Valor)
+Funcion resultado_tangente = calculo_operacion_tangente(angulo Por Valor)
     Definir mensaje Como Texto;
-	Definir resultado_tangente Como real;
+	Definir resultado_tangente Como Real;
 	
 	resultado_tangente = TAN(angulo);
 	
@@ -1188,8 +1188,8 @@ FinFuncion
 // Impresion TANGENTE
 Funcion imprimir_operacion_tangente(resultado_tangente Por Valor, angulo Por Valor)
     Definir mensaje Como Texto;   
-    mensaje = "El termino es: "+ConvertirATexto(angulo); Escribir mensaje;	
-	mensaje = "El resultado del seno del angulo es: "+ConvertirATexto(resultado_tangente); Escribir mensaje;
+    mensaje = "El angulo es: "+ConvertirATexto(angulo); Escribir mensaje;	
+	mensaje = "El resultado de la tangente del angulo es: "+ConvertirATexto(resultado_tangente); Escribir mensaje;
 FinFuncion
 
 // Acerca de TANGENTE
@@ -1258,8 +1258,8 @@ FinFuncion
 // Impresion COTANGENTE
 Funcion imprimir_operacion_cotangente(resultado_cotangente Por Valor, angulo Por Valor)
     Definir mensaje Como Texto;   
-    mensaje = "El termino es: "+ConvertirATexto(angulo); Escribir mensaje;	
-	mensaje = "El resultado del seno del angulo es: "+ConvertirATexto(resultado_cotangente); Escribir mensaje;
+    mensaje = "El angulo es: "+ConvertirATexto(angulo); Escribir mensaje;	
+	mensaje = "El resultado de la contangente del angulo es: "+ConvertirATexto(resultado_cotangente); Escribir mensaje;
 FinFuncion
 
 // Acerca de COTANGENTE
@@ -1328,8 +1328,8 @@ FinFuncion
 // Impresion SECANTE
 Funcion imprimir_operacion_secante(resultado_secante Por Valor, angulo Por Valor)
     Definir mensaje Como Texto;   
-    mensaje = "El termino es: "+ConvertirATexto(angulo); Escribir mensaje;	
-	mensaje = "El resultado del seno del angulo es: "+ConvertirATexto(resultado_secante); Escribir mensaje;
+    mensaje = "El angulo es: "+ConvertirATexto(angulo); Escribir mensaje;	
+	mensaje = "El resultado de la secante del angulo es: "+ConvertirATexto(resultado_secante); Escribir mensaje;
 FinFuncion
 
 // Acerca de SECANTE
@@ -1398,8 +1398,8 @@ FinFuncion
 // Impresion COSECANTE
 Funcion imprimir_operacion_cosecante(resultado_cosecante Por Valor, angulo Por Valor)
     Definir mensaje Como Texto;   
-    mensaje = "El termino es: "+ConvertirATexto(angulo); Escribir mensaje;	
-	mensaje = "El resultado del seno del angulo es: "+ConvertirATexto(resultado_cosecante); Escribir mensaje;
+    mensaje = "El angulo es: "+ConvertirATexto(angulo); Escribir mensaje;	
+	mensaje = "El resultado de la cosecante del angulo es: "+ConvertirATexto(resultado_cosecante); Escribir mensaje;
 FinFuncion
 
 // Acerca de COSECANTE
